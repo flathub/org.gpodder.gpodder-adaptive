@@ -1,4 +1,4 @@
-From 2ed64163cd63dfecde0e4c82ddff6128cffd20cf Mon Sep 17 00:00:00 2001
+From 643d15971c3da538ca9726473ddf3e6882bba4c9 Mon Sep 17 00:00:00 2001
 From: Teemu Ikonen <tpikonen@gmail.com>
 Date: Tue, 6 Sep 2022 20:10:56 +0300
 Subject: [PATCH] Add appdata.xml for the adaptive version
@@ -10,7 +10,7 @@ Subject: [PATCH] Add appdata.xml for the adaptive version
 
 diff --git a/share/metainfo/org.gpodder.gpodder-adaptive.appdata.xml b/share/metainfo/org.gpodder.gpodder-adaptive.appdata.xml
 new file mode 100644
-index 00000000..95913d74
+index 00000000..58d3cf29
 --- /dev/null
 +++ b/share/metainfo/org.gpodder.gpodder-adaptive.appdata.xml
 @@ -0,0 +1,89 @@
@@ -64,19 +64,19 @@ index 00000000..95913d74
 +   <screenshots>
 +    <screenshot type="default">
 +      <caption>Channel list with search</caption>
-+      <image>https://github.com/tpikonen/flathub/raw/new-pr/screenshot1.png</image>
++      <image>https://raw.githubusercontent.com/flathub/org.gpodder.gpodder-adaptive/master/screenshot1.png</image>
 +    </screenshot>
 +    <screenshot>
 +      <caption>Episode list with search</caption>
-+      <image>https://github.com/tpikonen/flathub/raw/new-pr/screenshot2.png</image>
++      <image>https://raw.githubusercontent.com/flathub/org.gpodder.gpodder-adaptive/master/screenshot2.png</image>
 +    </screenshot>
 +    <screenshot>
 +      <caption>Shownotes</caption>
-+      <image>https://github.com/tpikonen/flathub/raw/new-pr/screenshot3.png</image>
++      <image>https://raw.githubusercontent.com/flathub/org.gpodder.gpodder-adaptive/master/screenshot3.png</image>
 +    </screenshot>
 +    <screenshot>
 +      <caption>Main window, unfolded</caption>
-+      <image>https://github.com/tpikonen/flathub/raw/new-pr/screenshot4.png</image>
++      <image>https://raw.githubusercontent.com/flathub/org.gpodder.gpodder-adaptive/master/screenshot4.png</image>
 +    </screenshot>
 +  </screenshots>
 +  <releases>
