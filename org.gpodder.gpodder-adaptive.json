@@ -1,7 +1,7 @@
 {
   "app-id": "org.gpodder.gpodder-adaptive",
   "runtime": "org.gnome.Platform",
-  "runtime-version": "42",
+  "runtime-version": "43",
   "sdk": "org.gnome.Sdk",
   "command": "gpodder",
   "rename-icon": "gpodder-adaptive",
@@ -25,16 +25,23 @@
     "python3-requirements.json",
     "shared-modules/libappindicator/libappindicator-gtk3-introspection-12.10.json",
     {
+      "name": "dbus-python",
+      "buildsystem": "autotools",
+      "sources": [
+        {
+          "type": "archive",
+          "url": "https://dbus.freedesktop.org/releases/dbus-python/dbus-python-1.3.2.tar.gz",
+          "sha256": "ad67819308618b5069537be237f8e68ca1c7fcc95ee4a121fe6845b1418248f8"
+        }
+      ]
+    },
+    {
       "name": "gpodder-adaptive",
       "sources": [
         {
           "type": "archive",
-          "url": "https://github.com/gpodder/gpodder/archive/refs/tags/adaptive/3.11.0+1.tar.gz",
-          "sha256": "f30aa3a477ffecf7cfc4b65913902556499d3710127cd10d12ff46a70321320b"
-        },
-        {
-          "type": "patch",
-          "path": "appdata.patch"
+          "url": "https://github.com/gpodder/gpodder/archive/refs/tags/adaptive/3.11.1+1.tar.gz",
+          "sha256": "c598aeba3470225420868315df0151897b47b916bcfc4082ac6c7c8170347723"
         }
       ],
       "buildsystem": "simple",
