@@ -1,7 +1,7 @@
 {
   "app-id": "org.gpodder.gpodder-adaptive",
   "runtime": "org.gnome.Platform",
-  "runtime-version": "44",
+  "runtime-version": "45",
   "sdk": "org.gnome.Sdk",
   "command": "gpodder",
   "rename-icon": "gpodder-adaptive",
@@ -40,8 +40,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://github.com/gpodder/gpodder/archive/refs/tags/adaptive/3.11.2+1.tar.gz",
-          "sha256": "38e00410b7998fa361f87eb1bbff14f73f0f584820351953809a35d694c4247f"
+          "url": "https://github.com/gpodder/gpodder/archive/refs/tags/adaptive/3.11.3+1.tar.gz",
+          "sha256": "880df7af8a9abbbb448db84f46ebf6a9f9a4fd1db516ff0a87737985752aba73"
         }
       ],
       "buildsystem": "simple",
