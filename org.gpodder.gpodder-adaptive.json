@@ -40,8 +40,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://github.com/gpodder/gpodder/archive/refs/tags/adaptive/3.11.3+1.tar.gz",
-          "sha256": "880df7af8a9abbbb448db84f46ebf6a9f9a4fd1db516ff0a87737985752aba73"
+          "url": "https://github.com/gpodder/gpodder/archive/refs/tags/adaptive/3.11.4+1.tar.gz",
+          "sha256": "560c5f0c1ddcc64d97791d4ca1aaa60ab8a8b568d9951cb50fb7b001a76e926e"
         }
       ],
       "buildsystem": "simple",
@@ -49,7 +49,8 @@
         "make install PREFIX=$FLATPAK_DEST",
         "mv $FLATPAK_DEST/share/applications/gpodder-url-handler.desktop $FLATPAK_DEST/share/applications/$FLATPAK_ID.gpodder-url-handler.desktop",
         "rm -fr $FLATPAK_DEST/share/icons/hicolor/16x16/apps/gpodder.ico",
-        "rm -fr $FLATPAK_DEST/share/metainfo/org.gpodder.gpodder.appdata.xml"
+        "rm -fr $FLATPAK_DEST/share/metainfo/org.gpodder.gpodder.appdata.xml",
+        "touch $FLATPAK_DEST/share/gpodder/no-update-check"
       ]
     }
   ]
