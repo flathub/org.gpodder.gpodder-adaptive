@@ -40,8 +40,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://github.com/gpodder/gpodder/archive/refs/tags/adaptive/3.11.4+1.tar.gz",
-          "sha256": "560c5f0c1ddcc64d97791d4ca1aaa60ab8a8b568d9951cb50fb7b001a76e926e"
+          "url": "https://github.com/gpodder/gpodder/archive/refs/tags/adaptive/3.11.5+1.tar.gz",
+          "sha256": "02638f9e6ea3bca6c1e308a172dedb88ab68420c45910034dfffc0119fc87a40"
         }
       ],
       "buildsystem": "simple",
