@@ -15,6 +15,7 @@
     "--share=network",
     "--own-name=org.gpodder.*",
     "--talk-name=org.gtk.vfs.*",
+    "--talk-name=org.kde.StatusNotifierWatcher",
     "--filesystem=~/gPodder"
   ],
   "cleanup": [
