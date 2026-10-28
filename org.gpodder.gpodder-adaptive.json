@@ -25,6 +25,28 @@
     "python3-requirements.json",
     "shared-modules/libappindicator/libappindicator-gtk3-introspection-12.10.json",
     {
+      "name": "libhandy",
+      "buildsystem": "meson",
+      "config-opts": [
+        "-Dintrospection=enabled",
+        "-Dvapi=false",
+        "-Dtests=false",
+        "-Dexamples=false",
+        "-Dglade_catalog=disabled"
+      ],
+      "sources": [
+        {
+          "type": "archive",
+          "url": "https://download.gnome.org/sources/libhandy/1.8/libhandy-1.8.3.tar.xz",
+          "sha256": "05b497229073ff557f10b326e074c5066f8743a302d4820ab97bcb5cd2dab087",
+          "x-checker-data": {
+            "type": "gnome",
+            "name": "libhandy"
+          }
+        }
+      ]
+    },
+    {
       "name": "dbus-python",
       "buildsystem": "meson",
       "sources": [
