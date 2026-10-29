@@ -1,7 +1,7 @@
 {
   "app-id": "org.gpodder.gpodder-adaptive",
   "runtime": "org.gnome.Platform",
-  "runtime-version": "49",
+  "runtime-version": "51",
   "sdk": "org.gnome.Sdk",
   "command": "gpodder",
   "rename-icon": "gpodder-adaptive",
@@ -15,6 +15,7 @@
     "--share=network",
     "--own-name=org.gpodder.*",
     "--talk-name=org.gtk.vfs.*",
+    "--talk-name=org.kde.StatusNotifierWatcher",
     "--filesystem=~/gPodder"
   ],
   "cleanup": [
@@ -24,6 +25,44 @@
   "modules": [
     "python3-requirements.json",
     "shared-modules/libappindicator/libappindicator-gtk3-introspection-12.10.json",
+    {
+      "name": "libhandy",
+      "buildsystem": "meson",
+      "config-opts": [
+        "-Dintrospection=enabled",
+        "-Dvapi=false",
+        "-Dtests=false",
+        "-Dexamples=false",
+        "-Dglade_catalog=disabled"
+      ],
+      "sources": [
+        {
+          "type": "archive",
+          "url": "https://download.gnome.org/sources/libhandy/1.8/libhandy-1.8.3.tar.xz",
+          "sha256": "05b497229073ff557f10b326e074c5066f8743a302d4820ab97bcb5cd2dab087",
+          "x-checker-data": {
+            "type": "gnome",
+            "name": "libhandy"
+          }
+        }
+      ]
+    },
+    {
+      "name" : "quickjs",
+      "buildsystem" : "simple",
+      "build-commands" : [
+        "make -j$(nproc)",
+        "strip qjs",
+        "cp qjs /app/bin"
+      ],
+      "sources" : [
+        {
+          "type" : "archive",
+          "url" : "https://bellard.org/quickjs/quickjs-2026-06-04.tar.xz",
+          "sha256" : "b376e839b322978313d929fd20663b11ba58b75df5a46c126dd19ea2fa70ad2a"
+        }
+      ]
+    },
     {
       "name": "dbus-python",
       "buildsystem": "meson",
@@ -42,6 +81,10 @@
           "type": "archive",
           "url": "https://github.com/gpodder/gpodder/archive/refs/tags/adaptive/3.11.5+1.tar.gz",
           "sha256": "02638f9e6ea3bca6c1e308a172dedb88ab68420c45910034dfffc0119fc87a40"
+        },
+        {
+          "type": "patch",
+          "path": "yt-dlp-quickjs.patch"
         }
       ],
       "buildsystem": "simple",
