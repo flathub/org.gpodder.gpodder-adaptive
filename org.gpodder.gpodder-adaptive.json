@@ -81,6 +81,10 @@
           "type": "archive",
           "url": "https://github.com/gpodder/gpodder/archive/refs/tags/adaptive/3.11.5+1.tar.gz",
           "sha256": "02638f9e6ea3bca6c1e308a172dedb88ab68420c45910034dfffc0119fc87a40"
+        },
+        {
+          "type": "patch",
+          "path": "yt-dlp-quickjs.patch"
         }
       ],
       "buildsystem": "simple",
